@@ -1,0 +1,22 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcumb from '../../components/astro/breadcumb.astro';
+import ShadowCalculator from '../../components/react/shadow-calculator';
+---
+
+<Layout title='Shadow Generator | VAKAKS'>
+	
+	<main class="min-h-screen rounded-md">
+		
+		<Breadcumb title="Shadow generator" position='text-left' />
+
+		<div class="bg-white container md:mx-auto rounded-b-lg">
+			<ShadowCalculator client:load/>
+		</div>
+			
+	</main>
+</Layout>
+
+<style>
+
+</style>
