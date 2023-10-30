@@ -1,88 +1,156 @@
 ---
+import "../styles/index.css";
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="author" content="Joe Watson SBF, John Cosky">
-    <meta name="publisher" content="Joe Watson SBF, John Cosky">
-    <meta name="description" content="Crafting digital excellence in CSS, shadows, and grid templates at Design.vakaks.com. Join us for design inspiration and innovation.">
-    <meta name="keywords" content="CSS, shadows, grid templates, web design, web development, design inspiration">
-    <meta name="robots" content="index, follow">
-    <meta name="revisit-after" content="30 days">
-    <meta name="rating" content="general">
-    <meta name="distribution" content="global">
-    <meta name="language" content="English">
-    <meta name="canonical" content="https://design.vakaks.com">
-    <meta name="og:title" content="Design.vakaks.com">
-    <meta name="og:description" content="Crafting digital excellence in CSS, shadows, and grid templates at Design.vakaks.com. Join us for design inspiration and innovation.">
-    <meta name="og:type" content="website">
-    <meta name="og:url" content="https://design.vakaks.com">
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='author' content='Joe Watson SBF, John Cosky' />
+    <meta name='publisher' content='Joe Watson SBF, John Cosky' />
+    <meta
+      name='description'
+      content='Crafting digital excellence in CSS, shadows, and grid templates at Design.vakaks.com. Join us for design inspiration and innovation.'
+    />
+    <meta
+      name='keywords'
+      content='CSS, shadows, grid templates, web design, web development, design inspiration'
+    />
+    <meta name='robots' content='index, follow' />
+    <meta name='revisit-after' content='30 days' />
+    <meta name='rating' content='general' />
+    <meta name='distribution' content='global' />
+    <meta name='language' content='English' />
+    <meta name='canonical' content='https://design.vakaks.com' />
+    <meta name='og:title' content='Vakaks Design' />
+    <meta
+      name='og:description'
+      content='Crafting digital excellence in CSS, shadows, and grid templates at Design.vakaks.com. Join us for design inspiration and innovation.'
+    />
+    <meta name='og:type' content='website' />
+    <meta name='og:url' content='https://design.vakaks.com' />
     <!-- <meta name="og:image" content="https://design.vakaks.com/images/your-image.jpg"> -->
-    <meta name="og:site_name" content="Design.vakaks.com">
+    <meta name='og:site_name' content='Design.vakaks.com' />
     <!-- <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@YourTwitterHandle"> -->
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Noto+Sans+Kawi:wght@400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap'
+      rel='stylesheet'
+    />
+    <meta name='generator' content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-size: 224px;
-		color: #ece7ea;
-		background-color: #121212;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-	.big-title {
-		font-size: max(3rem, 10vw);
-		font-weight: 600;
-		margin-top: 1rem;
-		margin-bottom: 1rem;
-	}
-	.title {
-		font-size: max(3rem, 6vw);
-		font-weight: 600;
-		margin-top: 1rem;
-		margin-bottom: 1rem;
-	}
-	.sub-title {
-		font-size: max(2rem, 4vw);
-		font-weight: 300;
-	}
-	.description {
-		font-size: max(1rem, 2vw);
-		margin-top: 1rem;
-		margin-bottom: 1rem;
-	}
+  @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Kawi:wght@400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+  :root {
+    --font--2: calc(
+      14.58 / 16 * 1rem + (15.36 - 14.58) *
+        calc((100vw - 320 / 16 * 1rem) / (1140 - 320))
+    );
+    --font--1: calc(
+      21 / 16 * 1rem + (24 - 21) *
+        calc((100vw - 320 / 16 * 1rem) / (1140 - 320))
+    );
+    --font-0: clamp(1rem, 0.9107rem + 0.4464vw, 1.1125rem);
+    --font-1: clamp(1.2rem, 0.7929rem + 1.7357vw, 2.625rem);
+    --font-2: clamp(1.44rem, 0.3514rem + 5.4429vw, 5.25rem);
+    --font-3: clamp(1.7281rem, -0.7781rem + 12.5313vw, 10.5rem);
+    --font-4: clamp(2.0738rem, -3.3337rem + 27.0375vw, 21rem);
+    --font-5: clamp(2.4881rem, -8.801rem + 56.4455vw, 42rem);
+    --space-l: calc(
+      ((21) * 2) / 16 * 1rem + (((24) * 2) - ((21) * 2)) *
+        calc((100vw - 320 / 16 * 1rem) / (1140 - 320))
+    );
+    --space-s: calc(
+      (21) / 16 * 1rem + ((24) - (21)) *
+        calc((100vw - 320 / 16 * 1rem) / (1140 - 320))
+    );
+  }
+
+  html,
+  body {
+    font-size: var(--font-0);
+    background-size: 224px;
+    background-color: #ece7ea;
+    color: #121212;
+    ont-family: "Roboto", sans-serif;
+  }
+
+  .space-l {
+    margin-top: var(--space-l);
+    margin-bottom: var(--space-l);
+  }
+  code {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+  }
+  .big-title {
+    font-size: var(--font-4);
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    line-height: 0.9;
+  }
+  .title {
+    font-size: var(--font-3);
+    font-weight: 500;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    line-height: 0.9;
+  }
+  .sub-title {
+    font-size: var(--font-2);
+    font-weight: 500;
+    line-height: 0.9;
+  }
+  .sub-title-2 {
+    font-size: var(--font-1);
+    font-weight: 500;
+    line-height: 0.9;
+    letter-spacing: 0.1rem;
+  }
+  .description {
+    font-size: var(--font-0);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .background-animate {
+    background-size: 400%;
+    -webkit-animation: AnimationName 3s ease infinite;
+    -moz-animation: AnimationName 3s ease infinite;
+    animation: AnimationName 3s ease infinite;
+  }
+
+  @keyframes AnimationName {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    70% {
+      background-position: 70% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
 </style>
