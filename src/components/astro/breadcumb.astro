@@ -1,0 +1,20 @@
+---
+type Props = {
+  title: string,
+  position: 'text-left' | 'text-right' | 'text-center',
+}
+
+const {title, position} = Astro.props
+
+---
+<div class={"bg-white w-full flex items-center h-40 sm:px-8 px-4" + position}>
+  <div class="container md:mx-auto">
+    <h1 class="text-font-2 font-extrabold text-primary-slate border-b pb-0">
+      {title}
+    </h1>
+  </div>
+</div>
+
+<style>
+
+</style>
