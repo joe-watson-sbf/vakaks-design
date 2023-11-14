@@ -1,0 +1,35 @@
+---
+type Props = {};
+
+const {} = Astro.props;
+
+interface Frontmatter {
+  heading: string;
+  btnText: string;
+  btnLink: string;
+  image: string;
+  description?: string;
+}
+
+const hero = await Astro.glob<Frontmatter>("./content/hero.md");
+const { heading, btnText, btnLink, image, description } = hero[0].frontmatter;
+
+---
+
+<section id='hero' class='lg:min-h-screen min-h-[50vh] sprecial-border p-4 grid place-items-center bg-primary-light animate-flip-up-2'>
+
+  <div class="lg:container lg:mx-auto">
+    <h1 class='text-4xl font-bold text-center text-primary-blue'>
+      { heading }
+    </h1>
+    <div>
+      <p class='text-center text-primary-light animate-name'>
+        { description }
+      </p>
+      <a href={ btnLink } class=''>
+        { btnText }
+      </a>
+    </div>
+  </div>
+  
+</section>

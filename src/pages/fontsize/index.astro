@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Breadcumb from '../../components/astro/breadcumb.astro';
-import CalculatorFontSize from '../../components/react/calculator-font-size';
+import CalculatorFontSize from '../../components/react/fontsize/calculator-font-size';
 
 const generateCode = () =>{
 	return `
@@ -22,24 +22,31 @@ const generateCode = () =>{
 <Layout title='Font Size | VAKAKS'>
 	
 	<main class="min-h-screen grid md:grid-cols-5 grid-cols-1 rounded-md">
-		<CalculatorFontSize	client:load/>
+		<div class="md:mx-0 mx-4">
+			<div class="block md:hidden md:mt-0 -mb-12">
+				<Breadcumb title="Font size calculator" position='text-left' />
+			</div>
+			<CalculatorFontSize	client:load/>
+		</div>
 
 		<div class="md:col-span-4 bg-white">
-			<Breadcumb title="Font size calculator" position='text-left' />
-			
-			<div class=" border-b pb-8 sm:mx-8 mx-4">
-				<p class="text-font--1 font-light text-primary-slate/60">	Add a viewport width to show its corresponding font size values.</p>
-				<p class="text-primary-slate/70 font-light text-font-0">Add a scale step to extend your scale up or down.</p>
+			<div class="md:block hidden">
+				<Breadcumb title="Font size calculator" position='text-left' />
+			</div>
+			<div class=" border-b pb-8 sm:mx-8 mx-4 md:-mt-6 mt-4">
+				<p class="font-light text-primary-slate/60 text-font--1">	Add a viewport width to show its corresponding font size values.</p>
+				<p class="text-primary-slate/70 font-light text-font--1">Add a scale step to extend your scale up or down.</p>
 			</div>
 			<div class="sm:mr-auto md:ml-8 ml-4 mt-0">
 				<h2 class=" font-normal mt-8 text-font-1 -mb-8">CSS Generator</h2>
 				<div class="p-4 bg-primary-light rounded-md space-l max-w-3xl">
-					<pre class="text-font--2">
+					<pre class="text-font--2 whitespace-pre-wrap">
 						{generateCode()}
 					</pre>
 				</div>
 			</div>
 		</div>
+
 	</main>
 </Layout>
 
