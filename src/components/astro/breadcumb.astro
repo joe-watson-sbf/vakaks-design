@@ -2,15 +2,19 @@
 type Props = {
   title: string,
   position: 'text-left' | 'text-right' | 'text-center',
+  className?: string
 }
 
-const {title, position} = Astro.props
+const {title, position="text-left", className} = Astro.props
+
+const absPosition = position === 'text-left' ? '-left-2xs' : position === 'text-right' ? '-right-xs' : 'left-1/2 -translate-x-1/2'
 
 ---
-<div class={"bg-white w-full flex items-center h-40 sm:px-8 px-4" + position}>
-  <div class="container md:mx-auto">
-    <h1 class="text-font-2 font-extrabold text-primary-slate border-b pb-0">
-      {title}
+<div class={position + " w-full grid place-items-center " + className }>
+  <div class="w-full border-b p-xs pt-xl">
+    <h1 class={"text-font-2 font-extralight text-primary-slate relative " + position}>
+      <span class="relative z-10">{title}</span>
+       <span class={"bg-primary-yellow/50  absolute z-0 -top-5 w-3/4 md:w-2/5 h-14 rounded-md " + absPosition}/>
     </h1>
   </div>
 </div>

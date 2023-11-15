@@ -1,7 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/astro/header.astro";
-import Footer from "../components/astro/footer.astro";
 import Hero from "../components/astro/home/hero.astro";
 import FontSizeSection from "../components/astro/home/font-size-section.astro";
 import ShadowSection from "../components/astro/home/shadow.astro";
@@ -9,11 +7,9 @@ import ShadowSection from "../components/astro/home/shadow.astro";
 ---
 
 <Layout title='Vakaks | DESIGN'>
-  <Header/>
 	<Hero />
-  <main class='min-h-screen relative animate-fade'>
+  <main class='min-h-screen relative'>
     <FontSizeSection />
 		<ShadowSection />
   </main>
-	<Footer/>
 </Layout>

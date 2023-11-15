@@ -14,6 +14,7 @@ export default {
 				'roboto-mono': ['Roboto Mono', 'monospace'],
 				'open-sans': ['Open Sans', 'sans-serif'],
 				'inter': ['Inter', 'sans-serif'],
+				'bangers': ['Bangers', 'sans-serif'],
 			},
 			fontSize: {
 				'font-0': 'var(--font-0)',

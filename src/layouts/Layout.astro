@@ -4,6 +4,9 @@ import "../styles/index.css";
 import "@fontsource-variable/montserrat";
 import "@fontsource/roboto";
 import "@fontsource/inter";
+import "@fontsource/bangers";
+import Footer from "../components/astro/footer.astro";
+import Header from "../components/astro/header.astro";
 
 interface Props {
   title: string;
@@ -16,11 +19,13 @@ const { title } = Astro.props;
 <html lang='en'>
   <head>
     <meta charset='UTF-8' />
-    <meta name='author' content='Joe Watson SBF, John Cosky' />
-    <meta name='publisher' content='Joe Watson SBF, John Cosky' />
+    <meta name='author' content='Joe Watson SBF' />
+    <meta name='publisher' content='Joe Watson SBF' />
     <meta
       name='description'
-      content='Crafting digital excellence in CSS, shadows, and grid templates at Design.vakaks.com. Join us for design inspiration and innovation.'
+      content='Crafting digital excellence in CSS, shadows, 
+      and grid templates at Design.vakaks.com. 
+      Join us for design inspiration and innovation.'
     />
     <meta
       name='keywords'
@@ -31,25 +36,22 @@ const { title } = Astro.props;
     <meta name='rating' content='general' />
     <meta name='distribution' content='global' />
     <meta name='language' content='English' />
-    <meta name='canonical' content='https://design.vakaks.com' />
-    <meta name='og:title' content='Vakaks Design' />
+    <meta name='canonical' content='https://creativista.vakaks.com/' />
+    <meta name='og:title' content='CreatiVista' />
     <meta
       name='og:description'
-      content='Crafting digital excellence in CSS, shadows, and grid templates at Design.vakaks.com. Join us for design inspiration and innovation.'
+      content='Crafting digital excellence in CSS, shadows, and grid templates at creativista.vakaks.com Join us for design inspiration and innovation.'
     />
     <meta name='og:type' content='website' />
-    <meta name='og:url' content='https://design.vakaks.com' />
-    <!-- <meta name="og:image" content="https://design.vakaks.com/images/your-image.jpg"> -->
-    <meta name='og:site_name' content='Design.vakaks.com' />
-    <!-- <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@YourTwitterHandle"> -->
-    <link rel='preconnect' href='https://fonts.googleapis.com' />
-    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+    <meta name='og:url' content='https://creativista.vakaks.com' />
+    <meta name='og:site_name' content='CreatiVista' />
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
   </head>
   <body>
+    <Header/>
     <slot />
+    <Footer/>
   </body>
 </html>
 <style is:global>
@@ -216,8 +218,10 @@ const { title } = Astro.props;
     margin-bottom: 1rem;
     line-height: 0.9;
   }
-  .title {
+  .title, h1 {
     font-size: var(--font-3);
+
+    font-family: 'Bangers', cursive;
     font-weight: 500;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -247,7 +251,40 @@ const { title } = Astro.props;
     animation: AnimationName 3s ease infinite;
   }
 
-  .sprecial-border {
+  .shape-1 {
+    border-radius: 5px 10px 15px 30px/30px 15px 10px 5px;
+  }
+  .shape-2 {
+    border-radius: 10px 20px 30px 40px/30px;
+  }
+
+  .transition-3 {
+    transition: .3s ease-in-out;
+  }
+  .transition-5 {
+    transition: .5s ease-in-out;
+  }
+
+  .duration-2 {
+    animation-duration: 2s;
+  }
+
+  .duration-3 {
+    animation-duration: 3s;
+  }
+  .duration-4 {
+    animation-duration: 4s;
+  }
+
+  .duration-5 {
+    animation-duration: 5s;
+  }
+
+  
+  
+
+
+  .border-special-0 {
     --b: 3px;
     --s: 0.45em;
     --color: var(--primary-slate);
@@ -277,12 +314,11 @@ const { title } = Astro.props;
     touch-action: manipulation;
   }
 
-  .sprecial-border-1 {
-    padding: var(--size-3);
+  .border-special-1 {
     border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
     border-style: solid;
     border-width: 2px;
-    box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
+    box-shadow: rgba(0, 0, 0, 0.3) 15px 28px 25px -18px;
     box-sizing: border-box;
     outline: none;
     transition: all 235ms ease-in-out;
@@ -293,6 +329,21 @@ const { title } = Astro.props;
     -webkit-user-select: none;
     touch-action: manipulation;
   }
+
+.bg-special-0{
+  padding-left: var(--size-2);
+  padding-top: var(--size-2);
+}
+.bg-special-0:after {
+  content: "";
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: var(--size-1);
+  left: var(--size-1);
+  transition: 0.2s;
+}
 
   @keyframes flip-down {
     0% {

@@ -1,4 +1,4 @@
-class FontSizeCalculator {
+export class FontSizeCalculator {
   
   private fontSizeProperties: any = {};
   private fluidMinWidth: number;
@@ -77,7 +77,3 @@ class FontSizeCalculator {
   }
 }
 
-// Usage
-const fontSizeCalculator = new FontSizeCalculator(320, 1292, 18, 22, 1.15, 1.15);
-const cssRoot = fontSizeCalculator.generateCSSRoot();
-console.log(cssRoot);

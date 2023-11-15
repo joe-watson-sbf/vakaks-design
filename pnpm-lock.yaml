@@ -20,6 +20,9 @@ dependencies:
   '@fontsource-variable/montserrat':
     specifier: ^5.0.16
     version: 5.0.16
+  '@fontsource/bangers':
+    specifier: ^5.0.17
+    version: 5.0.17
   '@fontsource/inter':
     specifier: ^5.0.15
     version: 5.0.15
@@ -889,6 +892,10 @@ packages:
 
   /@fontsource-variable/montserrat@5.0.16:
     resolution: {integrity: sha512-KwPT4ccZE1MY9fnlKBOWCTCz/siApJCHnS9nFhTBzo8eybFYLWQ0kaiZJXz6K0lpKAkBCO4fIkCaL8SSnLiKhg==}
+    dev: false
+
+  /@fontsource/bangers@5.0.17:
+    resolution: {integrity: sha512-QDhjt2Srr7jvO/RgyynkdZ3ZxRmo9lC9XQ3Y2HJ9zh8yOnPG5N0wpINpUaixtyaFZVQrrNa/UR2u9OLU2sTNww==}
     dev: false
 
   /@fontsource/inter@5.0.15:

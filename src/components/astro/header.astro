@@ -1,4 +1,5 @@
 ---
+import Logo from '../../components/astro/Logo.astro'
 type Props = {
 
 }
@@ -6,12 +7,18 @@ type Props = {
 const {} = Astro.props
 
 ---
-<header class="bg-primary-light p-4 flex justify-between items-center text-primary-dark">
-  <h1 class="container mx-auto text-primary-dark font-extrabold text-font-2">DESIGN</h1>
+<header class="bg-primary-light h-[17vh] py-xs px-xl flex md:justify-between justify-center md:flex-nowrap flex-wrap items-center text-primary-dark relative">
+  <Logo/>
   <nav class="container">
-    <ul class="flex space-x-4 justify-end">
-      <li><a href="#">About us</a></li>
-      <li><a href="#">Contact</a></li>
+    <ul class="flex space-x-4 md:justify-end justify-center">
+      <li><a class="whitespace-nowrap" href="/">Home</a></li>
+      <li><a class="whitespace-nowrap"  href="/#about">About us</a></li>
+      <li><a class="whitespace-nowrap" href="/#contact">Contact</a></li>
+      <li class="cursor-pointer">
+        <a class="border-primary-dark py-2 px-xs border-special-1 border text-primary-dark font-bold transition-3 bg-primary-yellow hover:bg-primary-dark transition-3  hover:text-primary-yellow" 
+          href="https://github.com/joe-watson-sbf/vakaks-creati-vista" target="_blank">
+        Github   
+      </a></li>
     </ul>
   </nav>
 </header>

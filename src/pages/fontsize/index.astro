@@ -3,50 +3,22 @@ import Layout from '../../layouts/Layout.astro';
 import Breadcumb from '../../components/astro/breadcumb.astro';
 import CalculatorFontSize from '../../components/react/fontsize/calculator-font-size';
 
-const generateCode = () =>{
-	return `
-	:root {
-		--font--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
-		--font--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
-		--font-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
-		--font-1: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
-		--font-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
-		--font-3: clamp(1.9438rem, 1.7707rem + 0.8652vw, 2.4413rem);
-		--font-4: clamp(2.3325rem, 2.0823rem + 1.2511vw, 3.0519rem);
-		--font-5: clamp(2.7994rem, 2.4461rem + 1.7663vw, 3.815rem);
-	}
-	`
-}
 ---
 
-<Layout title='Font Size | VAKAKS'>
+<Layout title='Font Size | CreatiVista'>
 	
-	<main class="min-h-screen grid md:grid-cols-5 grid-cols-1 rounded-md">
-		<div class="md:mx-0 mx-4">
-			<div class="block md:hidden md:mt-0 -mb-12">
-				<Breadcumb title="Font size calculator" position='text-left' />
-			</div>
-			<CalculatorFontSize	client:load/>
-		</div>
-
-		<div class="md:col-span-4 bg-white">
-			<div class="md:block hidden">
-				<Breadcumb title="Font size calculator" position='text-left' />
-			</div>
-			<div class=" border-b pb-8 sm:mx-8 mx-4 md:-mt-6 mt-4">
+	<main class="min-h-screen rounded-3xl bg-white sm:p-xs">
+		
+		<Breadcumb title="Font size calculator" position='text-center' className='container mx-auto px-xs'/>
+		<div class="">
+			<div class=" border-b pb-8 sm:mx-8 mx-4 mt-4">
 				<p class="font-light text-primary-slate/60 text-font--1">	Add a viewport width to show its corresponding font size values.</p>
 				<p class="text-primary-slate/70 font-light text-font--1">Add a scale step to extend your scale up or down.</p>
 			</div>
-			<div class="sm:mr-auto md:ml-8 ml-4 mt-0">
-				<h2 class=" font-normal mt-8 text-font-1 -mb-8">CSS Generator</h2>
-				<div class="p-4 bg-primary-light rounded-md space-l max-w-3xl">
-					<pre class="text-font--2 whitespace-pre-wrap">
-						{generateCode()}
-					</pre>
-				</div>
-			</div>
 		</div>
 
+		<CalculatorFontSize	client:load/>
+		
 	</main>
 </Layout>
 

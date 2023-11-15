@@ -21,32 +21,22 @@ const ShadowCalculator = () => {
   }
 
   const handleCopy = () => {
-    const text = `box-shadow: ${shandowGenerator(state)};\n\t-webkit-box-shadow: ${shandowGenerator(state)};\n\t-moz-box-shadow: ${shandowGenerator(state)};\n\tborder: 1px solid ${state.borderColor};`
+    const text = `box-shadow: ${shandowGenerator(state)};\n\t-webkit-box-shadow: ${shandowGenerator(state)};\n\t-moz-box-shadow: ${shandowGenerator(state)};`
     navigator.clipboard.writeText(text)
   }
 
 
   return (
     <div>
-      <div className="px-4 bg-primary-slate rounded-lg pt-6 border border-l-0 border-r-0 text-primary-yellow/80">
+      <div className="px-4 bg-primary-slate rounded-lg pt-6 border border-l-0 border-r-0 text-primary-yellow/80 text-font--1">
         <div className='flex items-center sm:gap-8 gap-4 border-b border-white pb-8 mb-8 container md:mx-auto '>
           <div className="flex items-center mb-4">
             <div className="flex items-center h-5">
               <input type="checkbox" onChange={ e => setState({ ...state, inset: e.currentTarget.checked }) } 
-              className="focus:ring-primary-yellow h-4 w-4 text-primary-yellow font-light text-font--2" /> Inset </div>
-            <button className="ml-auto text-sm bg-red-600 focus:outline-none focus:ring-red-600 focus:ring-opacity-50 focus:ring-offset-2 focus:ring-4 text-white hover:bg-red-700 py-1 px-3 rounded"> Remove </button>
+              className="focus:ring-primary-yellow h-4 w-4 text-primary-yellow font-light text-font--1" /> Inset </div>
           </div>
 
-          <div className='flex items-center gap-3'>
-            <label className="block text-font--2 font-light mb-1">Shadow color: </label>
-            <input type='color' value={state.color} onChange={e => setState({ ...state, color: e.currentTarget.value })}
-              className="shadow-sm outline-none h-8 block w-8" />
-          </div>
-          <div className='flex items-center gap-3'>
-            <label className="block text-font--2 font-light mb-1">Border color: </label>
-            <input type='color' value={state.color} onChange={e => setState({ ...state, borderColor: e.currentTarget.value })}
-              className="shadow-sm outline-none h-8 block w-8" />
-          </div>
+
         </div>
 
         <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 md:gap-8 gap-4'>
@@ -67,14 +57,12 @@ const ShadowCalculator = () => {
 
       <div className='my-4'>
         <pre className='flex flex-col bg-primary-light rounded-sm p-4 sm:w-3/4 border-2 border-slate-700'>
-          <code className='select-all text-font--2 block font-light text-primary-slate/70' onClick={handleCopy}>
+          <code className='select-all text-font--1 block font-light text-primary-slate/70' onClick={handleCopy}>
             {`box-shadow: ${shandowGenerator(state)};`}
             <br/>
             {`-webkit-box-shadow: ${shandowGenerator(state)};`}
             <br/>
             {`-moz-box-shadow: ${shandowGenerator(state)};`}
-            <br/>
-            {`border: 1px solid ${state.borderColor}`}
           </code>
         </pre>
       </div>
@@ -108,18 +96,18 @@ const InputGroup = ({ label, onChange, defaultValue }: InputGroupProps) => {
   return (
     <div>
       <div className="flex justify-between items-center mb-2 flex-wrap">
-        <label className="text-font--2 font-light block">{label}</label>
+        <label className="text-font--1 font-light block">{label}</label>
         <div className="flex gap-1 items-center">
           <span className="w-20 flex gap-1 justify-end text-primary-light text-sm border border-primary-light/30 rounded-md appearance-none py-1 px-2 text-right">
             {value}
-            <span className='block'>px</span>
+            <span className='block '>px</span>
           </span>
 
         </div>
       </div>
       <div className="relative z-0 mb-8">
         <input type="range" list='list-range' value={value} max={100} onChange={handleChange} min={-100}
-          className="focus:outline-none w-full bg-transparent" />
+          className="focus:outline-none w-full bg-transparent text-font--1" />
         <datalist id='list-range'>
           {
             Array.from({ length: 100 }, (_, i) => i - 100).map((i) => (

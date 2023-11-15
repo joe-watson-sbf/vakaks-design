@@ -12,26 +12,32 @@ const shadow = await Astro.glob<Frontmatter>("./content/fontsize.md");
 const { heading, btnText, btnLink, image, description } = shadow[0].frontmatter;
 ---
 
-<section class='sticky p-4 rounded-lg top-0 min-h-screen border-t grid place-items-center shadow-xl bg-white'>
-  <div class="container mx-auto py-16 px-4 sm:px-6 lg:px-8 bg-white border">
-    <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
+<section class='sticky p-4 rounded-lg top-0 min-h-screen h-screen border-t pb-2xl grid place-items-center shadow-xl bg-white'>
+  <div class="container mx-auto py-16 px-4 sm:px-6 lg:px-8  border border-primary-dark/50 relative">
+    <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 bg-special-0 after:bg-primary-light/40">
 
-      <div class="mt-12 md:mt-0">
-        <img src={image} alt="About Us Image" class="object-cover rounded-lg shadow-md"/>
-      </div>  
-      <div class="lg:max-w-lg space-y-xs">
-            <h2 class="text-3xl font-extrabold text-primary-dark sm:text-4xl">{heading}</h2>
-            <div>
-                <pre class="whitespace-pre-wrap font-inter text-primary-slate/60">
-                  <Content />
-                </pre>
-            </div>
-            <div>
-                <a href={btnLink} class="text-primary-blue font-medium group:"> {btnText}
-                    <span class="ml-2 group-hover:pl-2 transition-all ease-linear duration-300">&#8594;</span></a>
-            </div>
+    <div class="mt-12 md:mt-0">
+      <img src={image} alt="About Us Image" class="object-cover rounded-lg shadow-md"/>
+    </div>  
+    <div class="lg:max-w-lg gap gap-xs">
+      <div class="space-y-3xs">
+        <h2 class='text-font-1 font-extrabold font-bangers text-primary-dark relative'>
+          {heading}
+          <span class="bg-primary-yellow  absolute -left-2xs -z-10 -top-xs w-full h-14 rounded-md"/>
+        </h2>
+        <p class="text-font--1 text-primary-dark font-black ">{description}</p>
+      </div>
+      <div>
+          <pre class="whitespace-pre-wrap -mb-4 p-0 text-font--1 font-inter text-primary-slate/60">
+            <Content />
+          </pre>
+    </div>
+    <div class="px-xs">
+      <a href={btnLink} class="text-primary-blue shape-2 border- border-primary-blue font-medium group"> {btnText}
+        <span class="ml-2 group-hover:pl-2 transition-all ease-linear duration-300">&#8594;</span></a>
       </div>
     </div>
+  </div>
 </div>
 </section>
 
