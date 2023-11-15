@@ -7,10 +7,10 @@ type Props = {
 const {} = Astro.props
 
 ---
-<header class="bg-primary-light h-[17vh] py-xs px-xl flex md:justify-between justify-center md:flex-nowrap flex-wrap items-center text-primary-dark relative">
+<header class="bg-primary-light grid md:grid-cols-2 gap-y-xs grid-cols-1 p-xl place-items-center text-primary-dark relative">
   <Logo/>
-  <nav class="container">
-    <ul class="flex space-x-4 md:justify-end justify-center">
+  <nav class="lg:container block">
+    <ul class="flex gap-x-xs md:justify-end justify-center">
       <li><a class="whitespace-nowrap" href="/">Home</a></li>
       <li><a class="whitespace-nowrap"  href="/#about">About us</a></li>
       <li><a class="whitespace-nowrap" href="/#contact">Contact</a></li>
@@ -22,7 +22,3 @@ const {} = Astro.props
     </ul>
   </nav>
 </header>
-
-<style>
-
-</style>
