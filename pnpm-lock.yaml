@@ -17,6 +17,18 @@ dependencies:
   '@astrojs/vercel':
     specifier: ^5.1.0
     version: 5.1.0(astro@3.4.0)
+  '@fontsource-variable/montserrat':
+    specifier: ^5.0.16
+    version: 5.0.16
+  '@fontsource/bangers':
+    specifier: ^5.0.17
+    version: 5.0.17
+  '@fontsource/inter':
+    specifier: ^5.0.15
+    version: 5.0.15
+  '@fontsource/roboto':
+    specifier: ^5.0.8
+    version: 5.0.8
   '@types/react':
     specifier: ^18.0.21
     version: 18.2.33
@@ -26,6 +38,9 @@ dependencies:
   astro:
     specifier: ^3.4.0
     version: 3.4.0(typescript@5.2.2)
+  pnpm:
+    specifier: ^8.10.5
+    version: 8.10.5
   react:
     specifier: ^18.0.0
     version: 18.2.0
@@ -874,6 +889,22 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@fontsource-variable/montserrat@5.0.16:
+    resolution: {integrity: sha512-KwPT4ccZE1MY9fnlKBOWCTCz/siApJCHnS9nFhTBzo8eybFYLWQ0kaiZJXz6K0lpKAkBCO4fIkCaL8SSnLiKhg==}
+    dev: false
+
+  /@fontsource/bangers@5.0.17:
+    resolution: {integrity: sha512-QDhjt2Srr7jvO/RgyynkdZ3ZxRmo9lC9XQ3Y2HJ9zh8yOnPG5N0wpINpUaixtyaFZVQrrNa/UR2u9OLU2sTNww==}
+    dev: false
+
+  /@fontsource/inter@5.0.15:
+    resolution: {integrity: sha512-/IoWYEXl8lqJEx50JqNPT+bI4VNwxb/bg2oOfvG8PiEsDsmHRFvWBVHlohBNn1+QdBf+KbAjU/gb4vlGOSsVWw==}
+    dev: false
+
+  /@fontsource/roboto@5.0.8:
+    resolution: {integrity: sha512-XxPltXs5R31D6UZeLIV1td3wTXU3jzd3f2DLsXI8tytMGBkIsGcc9sIyiupRtA8y73HAhuSCeweOoBqf6DbWCA==}
+    dev: false
 
   /@jridgewell/gen-mapping@0.3.3:
     resolution: {integrity: sha512-HLhSWOLRi875zjjMG/r+Nv0oCW8umGb0BgEhyX3dDX3egwZtB8PqLnjz3yedt8R5StBrzcg4aBpnh8UA9D1BoQ==}
@@ -3412,6 +3443,12 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       find-up: 4.1.0
+    dev: false
+
+  /pnpm@8.10.5:
+    resolution: {integrity: sha512-nBYfQz2FVRxY8bOhCxjMPfcrWgLSyu5lZswFtvIK3e+UfnldkMOQM7+S3lUXfq1p2H9iqdqtyR56LjtY9JNToA==}
+    engines: {node: '>=16.14'}
+    hasBin: true
     dev: false
 
   /postcss-import@15.1.0(postcss@8.4.31):

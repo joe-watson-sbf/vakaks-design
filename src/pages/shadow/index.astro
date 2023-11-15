@@ -4,13 +4,13 @@ import Breadcumb from '../../components/astro/breadcumb.astro';
 import ShadowCalculator from '../../components/react/shadow-calculator';
 ---
 
-<Layout title='Shadow Generator | VAKAKS'>
+<Layout title='Shadow | CreatiVista'>
 	
-	<main class="min-h-screen rounded-md">
+	<main class="min-h-screen rounded-3xl bg-white sm:p-xs">
 		
-		<Breadcumb title="Shadow generator" position='text-left' />
+		<Breadcumb title="Shadow generator" position='text-center' className='container mx-auto px-xs'/>
 
-		<div class="bg-white container md:mx-auto rounded-b-lg">
+		<div class=" lg:container mx-auto rounded-b-lg p-xs">
 			<ShadowCalculator client:load/>
 		</div>
 			

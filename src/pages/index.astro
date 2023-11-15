@@ -1,16 +1,15 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/astro/home/hero.astro";
+import FontSizeSection from "../components/astro/home/font-size-section.astro";
+import ShadowSection from "../components/astro/home/shadow.astro";
+
 ---
 
-<Layout title="Vakaks | DESIGN">
-	<main class="grid place-items-center min-h-screen bg-primary-dark">
-		<div class="flex justify-center flex-col items-center">
-			<h1 class="title text-center text-primary-light">VAKAKS DESIGN</h1>
-			<h2 class="text-primary-yellow sub-title ">Welcome to our website</h2>
-		</div>
-	</main>
+<Layout title='Vakaks | DESIGN'>
+	<Hero />
+  <main class='min-h-screen relative'>
+    <FontSizeSection />
+		<ShadowSection />
+  </main>
 </Layout>
-
-<style>
-
-</style>

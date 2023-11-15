@@ -1,0 +1,26 @@
+---
+import Logo from '../../components/astro/Logo.astro'
+type Props = {
+
+}
+
+const {} = Astro.props
+
+---
+<footer class="py-xl px-4 mt-xl z-20 relative min-h-[8rem] sm:rounded-t-3xl text-font--1 w-full flex flex-col text-center bg-primary-dark text-primary-light">
+  <div class="">
+    <Logo textWhite/>
+  </div>
+  <hr class="my-4 border-primary-light opacity-10" />
+  <h5 class="opacity-80">
+    All rights reserved
+  </h5>
+  <p>
+    © {new Date().getFullYear()} 
+    <a class="font-black text-primary-yellow" href="https://vakaks.com" target="_blank"> VAKAKS</a>
+  </p>
+</footer>
+
+<style>
+
+</style>
