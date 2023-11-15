@@ -11,7 +11,7 @@ export default {
 				'primary-slate': '#1e293b',
 			},
 			fontFamily: {
-				'roboto-mono': ['Roboto Mono', 'monospace'],
+				'roboto': ['Roboto', 'sans-serif'],
 				'open-sans': ['Open Sans', 'sans-serif'],
 				'inter': ['Inter', 'sans-serif'],
 				'bangers': ['Bangers', 'sans-serif'],
@@ -23,6 +23,7 @@ export default {
 				'font-3': 'var(--font-3)',
 				'font-4': 'var(--font-4)',
 				'font-5': 'var(--font-5)',
+				'font-6': 'var(--font-6)',
 				'font--1': 'var(--font--1)',
 				'font--2': 'var(--font--2)',
 			},

@@ -3,13 +3,17 @@ import tailwind from "@astrojs/tailwind";
 import vercel from "@astrojs/vercel/serverless";
 import react from "@astrojs/react";
 
+// https://astro.build/config
 export default defineConfig({
-  integrations: [
-    tailwind(), 
-    react({
-      experimentalReactChildren: true
-    })
-  ],
+  integrations: [tailwind(), react({
+    experimentalReactChildren: true
+  })],
   output: "server",
-  adapter: vercel()
+  adapter: vercel(),
+  image: {
+    domains: ["astro.build"],
+    remotePatterns: [{
+      protocol: "https"
+    }]
+  }
 });
