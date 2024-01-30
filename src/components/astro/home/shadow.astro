@@ -12,7 +12,7 @@ const shadow = await Astro.glob<Frontmatter>("./content/shadow.md");
 const { heading, btnText, btnLink, image, description } = shadow[0].frontmatter;
 ---
 
-<section id='shadow' class='sticky px-xs top-0 h-screen py-xl bg-white grid place-items-center'>
+<section id='shadow' class=' px-xs py-xl bg-white grid place-items-center' transition:name="shadow">
 
   <div class='container mx-auto py-xl px-4 sm:px-6 lg:px-8 border border-primary-dark/50 relative rounded-lg'>
 

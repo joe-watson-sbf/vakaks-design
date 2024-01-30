@@ -1,22 +1,30 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Breadcumb from '../../components/astro/breadcumb.astro';
-import ShadowCalculator from '../../components/react/shadow-calculator';
+import Layout from "../../layouts/Layout.astro";
+import Breadcumb from "../../components/astro/breadcumb.astro";
+import ShadowCalculator from "../../components/react/shadow-calculator";
 ---
 
 <Layout title='Shadow | CreatiVista'>
-	
-	<main class="min-h-screen rounded-3xl bg-white sm:p-xs">
-		
-		<Breadcumb title="Shadow generator" position='text-center' className='container mx-auto px-xs'/>
+  <main
+    class='text-primary-slate 2xl:container 2xl:mx-auto rounded-3xl bg-white sm:mx-8 sm:px-xl px-xs pt-xs pb-2xl'
+  >
+    <h1 class='text-left font-inter text-font-4 font-thin mt-xl'>
+      Shadow generator tool
+    </h1>
 
-		<div class=" lg:container mx-auto rounded-b-lg p-xs">
-			<ShadowCalculator client:load/>
-		</div>
-			
-	</main>
+    <div
+      class='p-xs mt-8 font-open-sans text-primary-light flex flex-col justify-center bg-primary-slate border-special-1 mb-8'
+    >
+      <h2 class='font-light text-font-0'>
+        This tool helps you to generate a shadow for your design.
+      </h2>
+      <h2 class='font-light text-font-0'>
+        You can create multiple shadows and copy the CSS code.
+      </h2>
+    </div>
+
+    <ShadowCalculator client:load />
+  </main>
 </Layout>
 
-<style>
-
-</style>
+<style></style>

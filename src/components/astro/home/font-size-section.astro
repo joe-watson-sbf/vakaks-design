@@ -12,7 +12,7 @@ const shadow = await Astro.glob<Frontmatter>("./content/fontsize.md");
 const { heading, btnText, btnLink, image, description } = shadow[0].frontmatter;
 ---
 
-<section class='sticky md:p-4 rounded-lg top-0 min-h-screen h-screen border-t pb-2xl grid place-items-center shadow-xl bg-white'>
+<section class='md:p-4 rounded-lg border-t pb-2xl grid place-items-center shadow-xl bg-white' transition:name="hero">
   <div class="container mx-auto py-16 px-4 sm:px-6 lg:px-8  border border-primary-dark/50 relative">
     <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 bg-special-0 after:bg-primary-light/40">
 
