@@ -1,5 +1,6 @@
 import React from 'react'
 import { FontSizeCalculator } from './FontSizeCalculator'
+import { CopyTextBtn } from '../copy-text-btn'
 
 const CalculatorFontSize = () => {
 
@@ -38,28 +39,29 @@ const CalculatorFontSize = () => {
   }
 
   return (
-    <div className='lg:container mx-auto space-y-xs space-x-xs grid lg:grid-cols-5 grid-cols-1 rounded-md'>
-      <div className="bg-white rounded-lg lg:py-xl lg:px-0 p-xs mx-xs md:col-span-1 flex flex-col h-full">
-        <div>
-          <GroupInput label='Minimum viewport' onChange={handleChangeMinViewport} values={
-            {
-              vport: values.min.viewPort,
-              fontsize: values.min.fontSize
-            }
-          } />
-          <div className="h-8"></div>
-          <GroupInput label='Maximum viewport' onChange={handleChangeMaxViewport} values={
-            {
-              vport: values.max.viewPort,
-              fontsize: values.max.fontSize
-            }
-          } />
-        </div>
+    <div className='space-y-xs grid animate-flip-up-2 lg:grid-cols-5 grid-cols-1 rounded-md'>
+
+
+      <div className="md:col-span-1 grid lg:grid-cols-1 grid-cols-2 place-content-start lg:gap-8 gap-xs py-xs">
+        <GroupInput label='Minimum viewport' onChange={handleChangeMinViewport} values={
+          {
+            vport: values.min.viewPort,
+            fontsize: values.min.fontSize
+          }
+        } />
+        <GroupInput label='Maximum viewport' onChange={handleChangeMaxViewport} values={
+          {
+            vport: values.max.viewPort,
+            fontsize: values.max.fontSize
+          }
+        } />
       </div>
-      <div className="lg:col-span-4">
-        <h2 className=" font-normal text-font-1 px-xs">CSS Generator</h2>
-        <div className="border-special-0 border-primary-dark rounded-md ">
-          <pre className="text-font--2 px-xs whitespace-pre-wrap select-all">
+
+
+      <div className="lg:col-span-4 border-special-0 ">
+        <div className="overflow-x-auto py-xs custom-scroll relative border-primary-dark rounded-md ">
+          <CopyTextBtn text={calculFontSize()}/>
+          <pre className="text-font--2 select-all">
             {calculFontSize()}
           </pre>
         </div>
@@ -102,23 +104,23 @@ const GroupInput = ({ label, values, onChange }: GroupInputProps) => {
   }
 
   return (
-    <div className="flex flex-col px-xs text-font--1">
-      <label className="text-font--1 mb-2 font-normal text-primary-slate">
+    <div className="flex flex-col text-font--1">
+      <label htmlFor='viewPort' className="text-font--1 mb-2 font-medium text-primary-slate">
         {label}
       </label>
       <div className="flex flex-col gap-2 text-font--2">
 
-        <div className='flex items-stretch transition-all ease-linear duration-300 hover:border-primary-dark border-primary-dark/40 rounded-sm px-2 py-1 border'>
+        <div className='flex border-special-1 items-stretch transition-all ease-linear duration-300 hover:border-primary-dark border-primary-dark/40 rounded-sm px-2 py-1 border'>
           <input name='viewPort' type="number" onChange={handleChangeVport} defaultValue={values.vport} className="w-full bg-transparent text-primary-dark outline-none text-font--1" />
           <span className="text-primary-dark/70 mx-1 block text-font--1">px</span>
         </div>
 
-        <div className='flex items-stretch transition-all ease-linear duration-300 hover:border-primary-dark border-primary-dark/40 rounded-sm px-2 py-1 border'>
+        <div className='flex border-special-1 items-stretch transition-all ease-linear duration-300 hover:border-primary-dark border-primary-dark/40 rounded-sm px-2 py-1 border'>
           <input name='fontSize' type="number" onChange={handleChange} defaultValue={values.fontsize} className="w-full bg-transparent text-primary-dark outline-none text-font--1" />
           <span className="text-primary-dark/70 mx-1 block text-font--1">px</span>
         </div>
 
-        <div className='flex items-stretch transition-all ease-linear duration-300 hover:border-primary-dark border-primary-dark/40 rounded-sm px-2 py-1 border'>
+        <div className='flex border-special-1 items-stretch transition-all ease-linear duration-300 hover:border-primary-dark border-primary-dark/40 rounded-sm px-2 py-1 border'>
           <select onChange={handleChangeScale} name='scale' className="bg-transparent w-full text-primary-dark outline-none text-font--1" >
             {scales.map(scale => <option className='text-font--1' key={scale} value={scale}>{scale}</option>)}
           </select>

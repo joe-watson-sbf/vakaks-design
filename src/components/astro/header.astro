@@ -7,13 +7,11 @@ type Props = {
 const {} = Astro.props
 
 ---
-<header class="bg-primary-light grid md:grid-cols-2 gap-y-xs grid-cols-1 p-xl place-items-center text-primary-dark relative">
+<header class="bg-primary-light flex justify-between gap-8 p-8 items-center 2xl:max-w-7xl 2xl:mx-auto text-primary-dark relative">
   <Logo/>
-  <nav class="lg:container block">
+  <nav class="block">
     <ul class="flex gap-x-xs md:justify-end justify-center">
       <li><a class="whitespace-nowrap" href="/">Home</a></li>
-      <li><a class="whitespace-nowrap"  href="/#about">About us</a></li>
-      <li><a class="whitespace-nowrap" href="/#contact">Contact</a></li>
       <li class="cursor-pointer">
         <a class="border-primary-dark py-2 px-xs border-special-1 border text-primary-dark font-bold transition-3 bg-primary-yellow hover:bg-primary-dark transition-3  hover:text-primary-yellow" 
           href="https://github.com/joe-watson-sbf/vakaks-creati-vista" target="_blank">
